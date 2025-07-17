@@ -232,8 +232,6 @@ To ensure smooth workflow for developing, testing and deploying the e-commerce p
 
 ## Capstone Submission
 
-
-
 - Maintaining a secure and functional web server involves setting correct file permissions and ownership. In Apache-based environments, files in `/var/www/html` should be owned by the Apache user, with directories set to `755` and files to `644`. These settings ensure the server operates smoothly while protecting content from unauthorized changes. Regular system updates using `yum update`, automated with cron jobs, help keep the operating system and Apache server secure with the latest patches. When issues occur, common fixes include restarting Apache, adjusting file ownership, modifying `.git` permissions, or correcting AWS security group settings to allow HTTP traffic.
 
 - To streamline deployments and reduce human error, setting up a CI/CD pipeline with GitHub Actions is highly effective. This automation allows code to be deployed to an AWS EC2 instance each time a change is pushed to GitHub. The workflow typically uses SSH to log into the server, pull the latest code, and reload Apache. Using SSH keys instead of passwords, enabling HTTPS via Certbot, and following a structured Git workflow with isolated branches all contribute to a secure and efficient development process. Tools like GitHub, EC2, Apache, and SSH keys form the backbone of this deployment environment.
